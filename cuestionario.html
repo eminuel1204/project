@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre la Página Web</title>
+</head>
+<body bgcolor="lightblue">
+    <h1 style="text-align: center;">Cuestionario sobre la Página Web</h1>
+    <form action="procesar_formulario.php" method="POST">
+        <table border="1" align="center" cellpadding="10" cellspacing="0">
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="correo">Correo Electrónico:</label></td>
+                <td><input type="email" id="correo" name="correo" required></td>
+            </tr>
+            <tr>
+                <td><label for="opinion">¿Qué opinas de la página web?</label></td>
+                <td>
+                    <input type="radio" id="excelente" name="opinion" value="Excelente" required>
+                    <label for="excelente">Excelente</label><br>
+                    <input type="radio" id="buena" name="opinion" value="Buena">
+                    <label for="buena">Buena</label><br>
+                    <input type="radio" id="regular" name="opinion" value="Regular">
+                    <label for="regular">Regular</label><br>
+                    <input type="radio" id="mala" name="opinion" value="Mala">
+                    <label for="mala">Mala</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="caracteristicas">¿Qué características consideras importantes?</label></td>
+                <td>
+                    <input type="checkbox" id="diseño" name="caracteristicas[]" value="Diseño atractivo">
+                    <label for="diseño">Diseño atractivo</label><br>
+                    <input type="checkbox" id="usabilidad" name="caracteristicas[]" value="Usabilidad">
+                    <label for="usabilidad">Usabilidad</label><br>
+                    <input type="checkbox" id="rapidez" name="caracteristicas[]" value="Rapidez">
+                    <label for="rapidez">Rapidez</label><br>
+                    <input type="checkbox" id="contenido" name="caracteristicas[]" value="Contenido de calidad">
+                    <label for="contenido">Contenido de calidad</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mejorar">¿Qué aspectos mejorarías? (Selecciona varios)</label></td>
+                <td>
+                    <select id="mejorar" name="mejorar[]" multiple size="4">
+                        <option value="Diseño">Diseño</option>
+                        <option value="Velocidad">Velocidad</option>
+                        <option value="Accesibilidad">Accesibilidad</option>
+                        <option value="Contenido">Contenido</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="comentarios">Comentarios adicionales:</label></td>
+                <td><textarea id="comentarios" name="comentarios" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Restablecer</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
